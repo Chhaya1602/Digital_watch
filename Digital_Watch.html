@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Watch</title>
+    <style>
+        button {
+            background-color: navy;
+            color: aliceblue;
+            padding: 10px;
+            width: 250px;
+            height: 150px;
+            font-size: 25px;
+            font-weight: bold;
+            font-family: cursive;
+            border-radius: 15px;
+            background: linear-gradient(to left top, rgb(231, 207, 211), rgb(163, 233, 163), rgb(179, 179, 242));
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Digital Watch</h2>
+    <li>Clocks are useful elements for any UI if used in a proper way. Clocks can be used on sites where time is the
+        main concern like some booking sites or some apps showing arriving times of trains, buses, flights, etc.
+
+        We will learn to make a digital clock using HTML, CSS, and JavaScript.</li> <br><br>
+
+    <button id="show">Show Time</button>
+
+    <script>
+        setInterval(() => {
+            const currentDate = new Date()
+            const time = currentDate.toLocaleTimeString()
+            const date = currentDate.toLocaleDateString()
+
+            document.getElementById('show').innerHTML = `${date} <br> ${time}`
+        }, 1000)
+    </script>
+
+</body>
